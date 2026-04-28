@@ -1,0 +1,57 @@
+{
+  "name": "@vraj0703/ai-memory",
+  "version": "0.1.0",
+  "description": "Persistent memory organ for AI agents — vector store, strategies, cognitive state, knowledge manifests. Mockable defaults so it runs without SQLite, Ollama, or NextCloud.",
+  "license": "MIT",
+  "author": "Vishal Raj",
+  "homepage": "https://github.com/vraj0703/ai-memory",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vraj0703/ai-memory.git"
+  },
+  "bugs": "https://linear.app/raj-sadan/project/ai-memory-extract-memory-organ-bcc3770af613",
+  "keywords": ["ai", "agent", "memory", "vector", "embeddings", "cognitive", "mcp"],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "bin": {
+    "ai-memory": "./bin/ai-memory.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./container": "./src/di/container.js",
+    "./constants": "./src/domain/constants/index.js"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/ src/domain/use_cases/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "smol-toml": "^1.6.1"
+  },
+  "peerDependencies": {
+    "better-sqlite3": "^12.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "peerDependenciesMeta": {
+    "better-sqlite3": { "optional": true },
+    "@modelcontextprotocol/sdk": { "optional": true },
+    "zod": { "optional": true }
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^12.0.0",
+    "zod": "^3.22.0"
+  }
+}
