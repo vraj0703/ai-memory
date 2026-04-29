@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-04-29
+
+### Changed (BREAKING — npm scope)
+
+- **Renamed npm package from `@vraj0703/ai-memory` to `@raj-sadan/ai-memory`** to match the project's npm org. Update install: `npm install @raj-sadan/ai-memory`.
+- `release.yml` added — tag-triggered npm publish with provenance attestation.
+- `publishConfig` added: `access: public`, `provenance: true`.
+- `npm test` script changed from `node --test tests/ ...` to `node --test tests/*.test.js ...` (Node 22+ rejects bare directory args without `--recurse`).
+
+### Note
+
+v0.1.0 existed only as a Git tag (never published to npm). v0.1.1 is the first npm publish.
+
 ## [0.1.0] — 2026-04-28
 
 First public release. Lifted from raj-sadan's v2 memory organ.

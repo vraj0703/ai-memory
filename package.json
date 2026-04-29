@@ -1,6 +1,10 @@
 {
-  "name": "@vraj0703/ai-memory",
-  "version": "0.1.0",
+  "name": "@raj-sadan/ai-memory",
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "description": "Persistent memory organ for AI agents — vector store, strategies, cognitive state, knowledge manifests. Mockable defaults so it runs without SQLite, Ollama, or NextCloud.",
   "license": "MIT",
   "author": "Vishal Raj",
@@ -33,7 +37,7 @@
   ],
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --test tests/ src/domain/use_cases/*.test.js"
+    "test": "node --test tests/*.test.js src/domain/use_cases/*.test.js"
   },
   "dependencies": {
     "express": "^5.1.0",
